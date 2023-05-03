@@ -1,21 +1,18 @@
-function newImage(img, left, bottom){
-
-    let image = document.createElement('img')
-    image.src = img
-    image.style.position = 'fixed'
-    image.style.left = left
-    image.style.bottom = bottom
-    document.body.append(image)
-    return image
-
+function newImage(url, left, bottom){
+    let object = document.createElement('img')
+    object.src = url
+    object.style.position = 'fixed'
+    object.style.left = left + 'px'
+    object.style.bottom = bottom + 'px'
+    document.body.append(object)
+    return object
 }
 
-function newItem(img, left, bottom){
-let image = newImage(img, left, bottom)
-
-image.addEventListener('dblclick', function(){
-image.remove()
-}) 
+function newItem(url, left, bottom){
+    let item = newImage(url, left, bottom)
+    item.addEventListener('click',function(){
+        item.remove()
+    })
 }
 
 function newInventory(){
@@ -35,13 +32,13 @@ function newInventory(){
 }
 
 newInventory()
-newImage('assets/green-character.gif', '100px', '250px')
-newImage('assets/pine-tree.png', '450px', '350px')
-newImage('assets/tree.png', '200px', '450px')
-newImage('assets/pillar.png', '350px', '200px')
-newImage('assets/crate.png', '150px', '350px')
-newImage('assets/well.png', '500px', '575px')
+newImage('assets/green-character.gif', 100, 250)
+newImage('assets/tree.png', 200, 450)
+newImage('assets/pillar.png', 350, 250)
+newImage('assets/pine-tree.png', 450, 350)
+newImage('assets/crate.png', 150, 350)
+newImage('assets/well.png', 500, 575)
 
-newItem('assets/sword.png', '500px', '555px')
-newItem('assets/shield.png', '165px', '335px')
-newItem('assets/staff.png', '600px', '250px')
+newItem('assets/sword.png', 500, 555)
+newItem('assets/shield.png', 165, 335)
+newItem('assets/staff.png', 600, 250)
