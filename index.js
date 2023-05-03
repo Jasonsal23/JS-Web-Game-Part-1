@@ -18,13 +18,30 @@ image.remove()
 }) 
 }
 
-newImage('assets/green-character.gif', '100px', '100px')
-newImage('assets/pine-tree.png', '450px', '200px')
-newImage('assets/tree.png', '200px', '300px')
-newImage('assets/pillar.png', '350px', '100px')
-newImage('assets/crate.png', '150px', '200px')
-newImage('assets/well.png', '500px', '425px')
+function newInventory(){
+    let inventory = document.createElement('div')
+    inventory.style.position = 'fixed'
+    inventory.style.bottom = '0px';
+    inventory.style.left = '0px'
+    inventory.style.width = '100%'
+    inventory.style.height = '100px'
+    inventory.style.display = 'flex'
+    inventory.style.flexDirection = 'row'
+    inventory.style.alignItems = 'center'
+    inventory.style.justifyContent = 'space-evenly'
+    inventory.style.border = '2px solid black'
+    inventory.style.backgroundColor = 'brown'
+    document.body.append(inventory)
+}
 
-newItem('assets/sword.png', '500px', '405px')
-newItem('assets/shield.png', '165px', '185px')
-newItem('assets/staff.png', '600px', '100px')
+newInventory()
+newImage('assets/green-character.gif', '100px', '250px')
+newImage('assets/pine-tree.png', '450px', '350px')
+newImage('assets/tree.png', '200px', '450px')
+newImage('assets/pillar.png', '350px', '200px')
+newImage('assets/crate.png', '150px', '350px')
+newImage('assets/well.png', '500px', '575px')
+
+newItem('assets/sword.png', '500px', '555px')
+newItem('assets/shield.png', '165px', '335px')
+newItem('assets/staff.png', '600px', '250px')
